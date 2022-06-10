@@ -1,0 +1,93 @@
+:root {
+  font-size: 62.5%; /*a medida rem é relativa e 1rem vale o mesmo que 10px. pra ficar mais fácil de colocar as medidas, a gente converte o font-size em porcentagem*/
+  --background-color: hsl(0, 0%, 95%);
+  --button-color: hsl(0, 63%, 38%);
+  --border-button: hsl(0, 0%, 36%);
+  --title: hsl(0, 0%, 18%);
+  --hover: hsl(0, 51%, 31%);
+}
+
+/*========== GERAL ==========*/
+
+body {
+  font-family: PT serif;
+}
+
+main {
+  background-color: var(--background-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  font-family: Dancing script;
+  font-weight: 100;
+  text-transform: lowercase;
+  color: var(--title);
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+img {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-weight: 500;
+  color: var(--title);
+  text-transform: lowercase;
+  font-family: parisienne;
+  font-size: 2.8rem;
+}
+
+.colunas {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  gap: 3rem;
+  /*  margin-inline: 40rem; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 'A B C';
+}
+
+.centro {
+  grid-area: B;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.direita {
+  grid-area: A;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.esquerda {
+  grid-area: C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+button {
+  background: var(--button-color);
+  color: var(--background-color);
+  border: var(--border-button);
+  text-transform: lowercase;
+  font-family: parisienne;
+  font-size: 2.2rem;
+  width: 15rem;
+  height: 4rem;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--hover);
+}
